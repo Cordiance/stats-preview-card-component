@@ -1,6 +1,7 @@
 $verydarkblue:hsl(233, 47%, 7%); //main background
 $darkdesaturatedblue:hsl(244, 38%, 16%); // card background
 $softviolet:hsl(277, 64%, 61%); // accent
+$softvioletimg: rgb(102, 31, 150); // img color
 $white:hsl(0, 0%, 100%); // main heading, stats
 $slightlytransparentwhitemain:hsla(0, 0%, 100%, 0.75); // main paragraph
 $slightlytransparentwhitestat:hsla(0, 0%, 100%, 0.6); // stat headings
@@ -22,9 +23,12 @@ body {
         max-width: 1010px;
         height: 405px;
         background-color: $darkdesaturatedblue;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
 
         .card-body {
-            padding: 4rem 4rem 2.65rem;
+            padding: 4rem 4rem 0rem;
+            background-color: $darkdesaturatedblue;
 
             .card-title {
                 font-size: 2.1rem;
@@ -71,13 +75,15 @@ body {
         .overlay {
             width: 100%;
             height: 404px;
-            background: $softviolet;
+            background: $softvioletimg;
             overflow: hidden;
-        }
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
 
-        img {
-            //width: 400px;
-            opacity: 0.6;
+            img {
+                height: 404px;
+                opacity: 0.4;
+            }
         }
     }
 
@@ -88,5 +94,75 @@ body {
 
     .attribution a {
         color: hsl(228, 45%, 44%);
+    }
+}
+
+@media screen and (min-width:768px) {
+    body {
+
+        .card .card-body .stats {
+            padding-top: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    body {
+        width: 330px;
+        height: 800px;
+        margin: 5vh auto;
+
+        .card {
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 10px;
+
+            .card-body {
+                padding: 2.5rem 0rem 0rem 0rem;
+                text-align: center;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+
+                .card-title {
+                    font-size: 1.6rem;
+                    padding: 0rem 2.5rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .card-text {
+                    font-size: 0.9rem;
+                    line-height: 1.55rem;
+                    padding: 0rem 2.5rem;
+                }
+
+                .stats {
+                    padding-top: 1.6rem;
+                    text-align: center;
+                    margin-right: 0rem;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: 1.4rem;
+
+                        span {
+                            font-size: 0.8rem;
+                            padding-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .overlay {
+                height: 240px;
+                border-bottom-right-radius: 0px;
+                border-top-left-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 }
