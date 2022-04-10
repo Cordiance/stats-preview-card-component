@@ -3,6 +3,78 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  background-color: #090b1a;
+  margin: 20vh auto;
+}
+
+body .card {
+  max-width: 1010px;
+  height: 405px;
+  background-color: #1b1938;
+}
+
+body .card .card-body {
+  padding: 4rem 4rem 2.65rem;
+}
+
+body .card .card-body .card-title {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+body .card .card-body .accent {
+  color: #aa5cdb;
+}
+
+body .card .card-body .card-text {
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  line-height: 1.4rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+body .card .card-body .stats {
+  padding-top: 3rem;
+  width: 320px;
+  margin-right: 1rem;
+}
+
+body .card .card-body .stats p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .card .card-body .stats p span {
+  font-family: 'Lexend Deca', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  padding-top: 0.3rem;
+}
+
+body .card .overlay {
+  width: 100%;
+  height: 404px;
+  background: #aa5cdb;
+  overflow: hidden;
+}
+
+body .card img {
+  opacity: 0.6;
 }
 
 body .attribution {

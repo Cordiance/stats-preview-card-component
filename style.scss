@@ -13,6 +13,73 @@ $slightlytransparentwhitestat:hsla(0, 0%, 100%, 0.6); // stat headings
 body {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
+    color: $white;
+    background-color: $verydarkblue;
+    margin: 20vh auto;
+
+    .card {
+        max-width: 1010px;
+        height: 405px;
+        background-color: $darkdesaturatedblue;
+
+        .card-body {
+            padding: 4rem 4rem 2.65rem;
+
+            .card-title {
+                font-size: 2.1rem;
+                font-weight: 600;
+            }
+
+            .accent {
+                color: $softviolet;
+            }
+
+            .card-text {
+                font-size: 0.9rem;
+                padding-top: 0.5rem;
+                line-height: 1.4rem;
+                color: $slightlytransparentwhitemain;
+
+            }
+
+            .stats {
+                padding-top: 3rem;
+                width: 320px;
+                margin-right: 1rem;
+            }
+
+            .stats p {
+                font-size: 1.3rem;
+                font-weight: 700;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                span {
+                    font-family: 'Lexend Deca', sans-serif;
+                    color: $slightlytransparentwhitestat;
+                    font-size: 0.7rem;
+                    font-weight: 400;
+                    letter-spacing: 0.05rem;
+                    text-transform: uppercase;
+                    padding-top: 0.3rem;
+                }
+            }
+        }
+
+        .overlay {
+            width: 100%;
+            height: 404px;
+            background: $softviolet;
+            overflow: hidden;
+        }
+
+        img {
+            //width: 400px;
+            opacity: 0.6;
+        }
+    }
 
     .attribution {
         font-size: 11px;
